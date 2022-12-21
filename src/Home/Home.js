@@ -20,7 +20,7 @@ const Home = () => {
             style={{display:'flex', flexWrap: 'wrap', justifyContent:"space-around"}}>
             {/*<button onClick={() => console.log(countries)}>Click</button>*/}
             {countries.map(p =>
-                <Link to={`details/${p.altSpellings[0]}`} key={p.ccn3}>
+                <Link to={`details/${p.altSpellings[0]}`} key={p.ccn3} className="Link">
                     <div className="countryCard">
                         <div>
                             <div
