@@ -1,0 +1,25 @@
+.cont {
+    width: 500px;
+    height: 700px;
+    margin: 5% auto;
+
+
+    display: flex;
+}
+.itemFlag{
+    min-width: 600px;
+    min-height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 35px;
+}
+.countryArea {
+    padding: 20px;
+
+}
+.flagInf {
+
+}
+.mainInf {
+
+}

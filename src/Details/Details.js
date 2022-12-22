@@ -1,15 +1,19 @@
 import React, {useEffect, useState} from 'react';
 import {Link, useParams} from "react-router-dom";
+import './details.css'
 
 const Details = () => {
     let {id} = useParams();
     const [country, setCountry] = useState(null)
+    const [isLoad, setIsLoad] = useState(false)
 
     useEffect(() => {
+        setIsLoad(true)
         fetch(`https://restcountries.com/v3.1/alpha/${id}`)
             .then(data => data.json())
             .then(x => setCountry(x[0]))
             // .catch(err => alert(err))
+        setIsLoad(false)
     }, [id])
 
     useEffect(() => {
@@ -31,28 +35,46 @@ const Details = () => {
             )
         }
     }
+    // const IsLoading = () => {
+    //     if(isLoad) {
+    //         return (
+    //             <div>
+    //                 is loading...
+    //             </div>
+    //         )
+    //     }
+    // }
     return (
+
         <div>
-            { country && (
-                <section>
-                <div
-                    style={{backgroundImage:`url(${country.flags.svg}`, width:'600px', height:'400px', backgroundSize:'100%', backgroundRepeat:'no-repeat' }}></div>
-                    <div>{country.name.official} | {country.continents}</div>
 
-                    <div>Capital: {country.capital}</div>
-                    <hr/>
-                    <div>
-                        <Bord/>
+            {country && (
+                <section style={{display:'flex', alignItems:'center'}}>
+                    <div className="cont">
+                        <div className="flagInf">
+                            <div
+                                className="itemFlag"
+                                style={{backgroundImage:`url(${country.flags.svg}`}}></div>
+                            <div className="countryArea">{country.area} km</div>
+                        </div>
+
+                        <div className="mainInf">
+                            <div>{country.name.official} | {country.continents}</div>
+
+                            <div>Capital city: {country.capital}</div>
+                        </div>
+                        <div>
+                            <Bord/>
+                        </div>
+
+
+
+                        <div>
+
+                        </div>
                     </div>
-                    <hr/>
-                    <div>{country.area} km</div>
-
-                    <div>
-
-                    </div>
-
                 </section>
-            )}
+            ) }
         </div>
     );
 };

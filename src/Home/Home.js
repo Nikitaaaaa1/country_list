@@ -9,7 +9,7 @@ const Home = () => {
     const [countries, setCountries] = useState([])
 
     useEffect(() => {
-        fetch('https://restcountries.com/v3.1/all')
+            fetch('https://restcountries.com/v3.1/all')
             .then(data => data.json())
             .then(x => setCountries(x))
             .catch(err => alert(err))
@@ -22,17 +22,22 @@ const Home = () => {
             {countries.map(p =>
                 <Link to={`details/${p.altSpellings[0]}`} key={p.ccn3} className="Link">
                     <div className="countryCard">
-                        <div>
-                            <div
-                                className="flag"
-                                style={{backgroundImage:`url(${p.flags.svg})`}}></div>
-                            {p.name.common}
+
+                        <div
+                            className="flag"
+                            style={{backgroundImage:`url(${p.flags.svg})`}}>
                         </div>
-                        <div>
-                            {p.capital}
-                        </div>
-                        <div>
-                            {p.continents}
+
+                        <div className="otherInformation">
+                            <div style={{fontWeight:'boaddld'}}>
+                                {p.name.common}
+                            </div>
+                            <div>
+                                {p.capital}
+                            </div>
+                            <div>
+                                {p.continents}
+                            </div>
                         </div>
                     </div>
                 </Link>
