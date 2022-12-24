@@ -49,7 +49,7 @@ const Details = () => {
         <div>
 
             {country && (
-                <section style={{display:'flex', alignItems:'center'}}>
+                <section style={{display:'flex'}}>
                     <div className="cont">
                         <div className="flagInf">
                             <div
@@ -59,18 +59,10 @@ const Details = () => {
                         </div>
 
                         <div className="mainInf">
-                            <div>{country.name.official} | {country.continents}</div>
-
+                            <div className="country-name">{country.name.official} </div>
+                            <div className="continent-name">{country.continents} </div>
                             <div>Capital city: {country.capital}</div>
-                        </div>
-                        <div>
                             <Bord/>
-                        </div>
-
-
-
-                        <div>
-
                         </div>
                     </div>
                 </section>

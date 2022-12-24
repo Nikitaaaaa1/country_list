@@ -27,13 +27,9 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    /*margin: 0 20px;*/
     border-radius: 5px;
 }
-/*.flagCont {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*}*/
+
 .otherInformation {
     width: 60%;
     height: 100%;
