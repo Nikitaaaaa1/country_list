@@ -9,13 +9,14 @@
     justify-content: space-between;
     align-items: center;
     background-color: rgba(211, 211, 211, 0.82);
-    z-index: 0 ;
+    /*z-index: 0 ;*/
     transition: .2s;
 }
 .countryCard:hover {
+    /*position: absolute;*/
     z-index: 1;
-    width: 350px;
-    height: 120px;
+    width: 330px;
+    height: 110px;
     transition: .2s;
     font-size: 20px;
     font-weight: bold;

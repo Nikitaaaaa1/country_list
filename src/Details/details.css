@@ -1,8 +1,13 @@
+
+
 .cont {
     width: 1000px;
-    height: 600px;
-    margin: 4% auto;
-    background-color: #afaeae;
+    height: 100%;
+    margin: 10% auto;
+    background: rgba(150, 146, 146, 0.21);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.2px);
+    -webkit-backdrop-filter: blur(6.2px);
     display: flex;
     border-radius: 35px;
 }
@@ -21,14 +26,29 @@
     font-size: 30px;
     font-weight: bold;
 }
-.countryArea {
-    padding: 20px;
-
+.continentName, .continentCapital {
+    font-size: 20px;
 }
-.flagInf {
+.countryArea {
+    margin-top: 70px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    font-size: 20px;
+}
 
+.population {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 .mainInf {
     margin-left: 5%;
-
+}
+.D {
+    transition: .1s;
+}
+.D:hover {
+    color: red;
+    font-size: 120%;
+    transition: .2s;
 }

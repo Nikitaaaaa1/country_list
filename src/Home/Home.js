@@ -36,7 +36,7 @@ const Home = () => {
                                 {p.capital}
                             </div>
                             <div>
-                                {p.continents}
+                                {p.region}
                             </div>
                         </div>
                     </div>
